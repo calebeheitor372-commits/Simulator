@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pegadinha</title>
+
+<style>
+body{
+background:black;
+color:lime;
+font-family:monospace;
+font-size:30px;
+padding:20px;
+}
+</style>
+
+</head>
+<body>
+
+<div id="txt">
+Iniciando...
+</div>
+
+<script>
+
+let mensagens = [
+"Hackeando NASA...",
+"Pegando localização...",
+"Acessando galeria...",
+"",
+"finalizado, dados de banco furtado."
+];
+
+let i = 0;
+
+function mostrar(){
+
+if(i < mensagens.length){
+
+document.getElementById("txt").innerHTML += "<br>" + mensagens[i];
+
+i++;
+
+setTimeout(mostrar,1000);
+
+}
+
+}
+
+setTimeout(mostrar,1000);
+
+</script>
+
+</body>
+</html>
