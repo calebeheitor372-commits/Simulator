@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simulador Hacker</title>
+
+<style>
+body{
+  background:black;
+  color:lime;
+  font-family:monospace;
+  padding:20px;
+}
+
+#texto{
+  white-space:pre-line;
+  font-size:22px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="texto"></div>
+
+<script>
+const mensagens = [
+"Conectando ao satélite...",
+"Acessando sistema secreto...",
+"Buscando localização...",
+"Encontrando fotos da galeria...",
+"",
+"😂 RDados acessado!
+];
+
+let i = 0;
+
+function mostrar(){
+  if(i < mensagens.length){
+    document.getElementById("texto").innerHTML += mensagens[i] + "\n";
+    i++;
+    setTimeout(mostrar, 1500);
+  }
+}
+
+mostrar();
+</script>
+
+</body>
+</html>
